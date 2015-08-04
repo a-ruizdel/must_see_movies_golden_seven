@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+
+  get("/directors/index", { :controller => "movies", :action => "directors" })
+
+  # Routes to CREATE directors
+get("/directors/new_director", { :controller => "movies", :action => "new_director" })
+
+get("/directors/create_row_director", { :controller => "movies", :action => "create_row_director" })
+
+# Routes to READ directors
+ get("/directors",           { :controller => "movies", :action => "directors" })
+
+ get("/directors/:id",       { :controller => "movies", :action => "show" })
+
+# Routes to DELETE directors
+get("/directors/delete_directors/:id", { :controller => "movies", :action => "destroy" })
+
+# Routes to EDIT directors
+get("/directors/edit_director/:id", { :controller => "movies", :action => "edit_director" })
+get("/directors/update_directors/:id", { :controller => "movies", :action => "update_row_director" })
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +73,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
 end
