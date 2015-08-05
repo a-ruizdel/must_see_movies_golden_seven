@@ -43,7 +43,7 @@ class MoviesController < ApplicationController
   end
 
   def edit_movie
-  @actor = Movie.find(params["id"])
+    @movie = Movie.find(params["id"])
     render ("/movies/edit_movie.html.erb")
   end
 

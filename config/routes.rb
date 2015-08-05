@@ -56,8 +56,8 @@ get("/movies/create_row_movie", { :controller => "movies", :action => "create_ro
 get("/movies/delete_movies/:id", { :controller => "movies", :action => "destroy" })
 
 # Routes to EDIT movies
-get("/movies/edit_movies/:id", { :controller => "movies", :action => "edit_movies" })
-get("/movies/update_movies/:id", { :controller => "movies", :action => "update_row_movies" })
+get("/movies/edit_movie/:id", { :controller => "movies", :action => "edit_movie" })
+get("/movies/update_movie/:id", { :controller => "movies", :action => "update_row_movie" })
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
