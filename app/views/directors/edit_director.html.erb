@@ -1,6 +1,6 @@
 <h1>Edit Director #<%= @director.id %></h1>
 
-<form action="http://localhost:3000/directors/edit_row_director<%= @director.id %>">
+<form action="http://localhost:3000/directors/update_directors/<%= @director.id %>">
 Director Name:
   <input name="director_name" type="string" value="<%= @director.director_name %>">
 
@@ -11,8 +11,10 @@ Director DOB:
   <input name="director_dob" type="string" value="<%= @director.director_dob %>">
 
 Director Photo:
-  <input name="director_img_url" type="string" value="<% @director.director_image_url %>">
+  <input name="director_img_url" type="string" value="<%= @director.director_image_url %>">
 
   <button>Update director</button>
+
+
 
 <a href="/directors/<%= @director.id %>">Cancel and go back</a>

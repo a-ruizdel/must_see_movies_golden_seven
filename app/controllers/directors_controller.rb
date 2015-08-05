@@ -1,4 +1,4 @@
-class MoviesController < ApplicationController
+class DirectorsController < ApplicationController
   def directors
 
     @list_of_directors = Director.all
@@ -54,7 +54,7 @@ class MoviesController < ApplicationController
       i.director_image_url = params["director_img_url"]
       i.save
 
-    redirect_to("http://localhost:3000/photos")
+    redirect_to("http://localhost:3000/directors")
   end
 
 end
