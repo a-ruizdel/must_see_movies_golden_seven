@@ -39,6 +39,26 @@ get("/actors/delete_actors/:id", { :controller => "actors", :action => "destroy"
 get("/actors/edit_actor/:id", { :controller => "actors", :action => "edit_actor" })
 get("/actors/update_actors/:id", { :controller => "actors", :action => "update_row_actor" })
 
+#Routes for movies
+
+get("/movies", { :controller => "movies", :action => "movies" })
+  # Routes to CREATE movies
+get("/movies/new_movie", { :controller => "movies", :action => "new_movie" })
+
+get("/movies/create_row_movie", { :controller => "movies", :action => "create_row_movie" })
+
+# Routes to READ movies
+ get("/movies/index",           { :controller => "movies", :action => "movies" })
+
+ get("/movies/:id",       { :controller => "movies", :action => "show" })
+
+# Routes to DELETE movies
+get("/movies/delete_movies/:id", { :controller => "movies", :action => "destroy" })
+
+# Routes to EDIT movies
+get("/movies/edit_movies/:id", { :controller => "movies", :action => "edit_movies" })
+get("/movies/update_movies/:id", { :controller => "movies", :action => "update_row_movies" })
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
