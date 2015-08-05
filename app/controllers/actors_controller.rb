@@ -41,20 +41,20 @@ class ActorsController < ApplicationController
     redirect_to("http://localhost:3000/actors")
   end
 
- # def edit_director
- # @director = Director.find(params["id"])
- # render ("/directors/edit_director.html.erb")
- # end
+  def edit_actor
+  @actor = Actor.find(params["id"])
+    render ("/actors/edit_actor.html.erb")
+  end
 
- #def update_row_director
- #    i = Director.find(params["id"])
- #     i.director_name = params["director_name"]
- #     i.director_bio = params["director_bio"]
- #     i.director_dob = params["director_dob"]
- #     i.director_image_url = params["director_img_url"]
- #     i.save
+  def update_row_actor
+    p = Actor.find(params["id"])
+    p.actor_name = params["actor_name"]
+    p.actor_bio = params["actor_bio"]
+    p.actor_dob = params["actor_dob"]
+    p.actor_image_url = params["actor_img_url"]
+    p.save
 
- #   redirect_to("http://localhost:3000/directors")
- # end
+    redirect_to("http://localhost:3000/actors")
+  end
 
 end

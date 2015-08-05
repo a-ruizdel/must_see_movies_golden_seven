@@ -36,8 +36,8 @@ get("/actors/create_row_actor", { :controller => "actors", :action => "create_ro
 get("/actors/delete_actors/:id", { :controller => "actors", :action => "destroy" })
 
 # Routes to EDIT actors
-#get("/actors/edit_actor/:id", { :controller => "actors", :action => "edit_actor" })
-#get("/actors/update_actors/:id", { :controller => "actors", :action => "update_row_actor" })
+get("/actors/edit_actor/:id", { :controller => "actors", :action => "edit_actor" })
+get("/actors/update_actors/:id", { :controller => "actors", :action => "update_row_actor" })
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
